@@ -4,7 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 import NavBar from './NavBar'
 import Home from './Home'
 import Feed from './Feed'
-import Explore from './Explore'
+import ExplorePage from './ExplorePage'
 import Form from './Form'
 
 function App() {
@@ -12,11 +12,11 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="posts/new">
+        <Route exact path="posts/new">
           <Form/>
         </Route>
         <Route path="/explore">
-          <Explore/>
+          <ExplorePage/>
         </Route>
         <Route exact path="/">
           <Home />
