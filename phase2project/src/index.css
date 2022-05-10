@@ -15,14 +15,13 @@ code {
     monospace;
 }
 
-.home {
+.home h1 {
   color: pink
 }
 
 .nav-bar {
   background: greenyellow;
   padding: 10px;
-  width: 200px
-
-  
+  width: 250px;
+  font-size: 50px
 }

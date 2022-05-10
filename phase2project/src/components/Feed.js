@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import PhotosList from './PhotosList'
+import Form from './Form'
 
 
 function Feed() {
@@ -13,6 +14,7 @@ function Feed() {
     
   return (
     <div>
+        <Form />
         <PhotosList posts={posts}/>
     </div>
   )
