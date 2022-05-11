@@ -1,5 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Signup from './Signup'
+import styled from 'styled-components'
+
+const Div = styled.div`
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 1px black;
+    margin-top: 50px;
+
+`
 
 function Login({handleLogin, users}) {
     const [formData, setFormData] = useState({
@@ -10,17 +19,9 @@ function Login({handleLogin, users}) {
     const [loginIsCorrect, setLoginIsCorrect] = useState(true)
     const [updatedUsers, setUpdatedUsers] = useState(users)
 
-    // const usernameArray = users.map(user => {
-    //     return user.username
-    // })
-
-    // const passwordArray = users.map(user => {
-    //     return user.password
-    // })
-
-    // console.log(usernameArray)
-    // console.log(passwordArray)
-
+    useEffect(() => {
+        setUpdatedUsers(users)
+    }, [users])
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -55,8 +56,8 @@ function Login({handleLogin, users}) {
 
 
   return (
-    <div>
-        <h1>Welcome to Finstagram</h1>
+    <Div>
+        <h1>Welcome to Gallery</h1>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Username: </label>
@@ -75,11 +76,11 @@ function Login({handleLogin, users}) {
         ? <Signup onSignUpClick={onSignUpClick} />
         : (
             <>
-                <small>New to Finstagram? </small>
+                <small>New to Gallery? </small>
                 <button onClick={handleSignUp} id="signup-btn">Sign Up</button>
             </>
         )}
-    </div>  
+    </Div>  
     
   )
 }

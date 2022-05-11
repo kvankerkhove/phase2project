@@ -4,7 +4,7 @@
       "id": 1,
       "img_url": "https://cdn.shopify.com/s/files/1/1358/2883/products/Classic-Flower-Wrap-Bright-Cheery-001_1024x1024.jpg?v=1628819601",
       "caption": "Flower Bouquet",
-      "location": "Garden"
+      "location": "Queens Botanical Garden"
     },
     {
       "id": 2,
@@ -23,11 +23,6 @@
       "id": 2,
       "username": "jnewman",
       "password": "5678"
-    },
-    {
-      "username": "nori",
-      "password": "1111",
-      "id": 3
     }
   ]
 }
