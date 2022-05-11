@@ -1,23 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import PhotosList from './PhotosList'
-import Form from './Form'
+import React from 'react';
+import PhotosList from './PhotosList';
 
+function Feed({posts}) {
 
-function Feed() {
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        fetch('http://localhost:3000/posts')
-        .then(res => res.json())
-        .then(data => setPosts(data))
-    }, [])
-    
   return (
     <div>
-        <Form />
         <PhotosList posts={posts}/>
     </div>
   )
 }
 
-export default Feed
+export default Feed;

@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
   text-align: center;
+  justify-content: center;
 }
 
 code {
@@ -19,13 +19,26 @@ code {
   color: pink
 }
 
+.form{   
+  width:400px;
+  padding:20px;
+}
+
+/* Nav Bar Styling*/
+.nav-link { 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-bar {
   background: greenyellow;
   padding: 10px;
   width: 250px;
-  font-size: 50px
+  font-size: 50px;
 }
 
+/* Explore page styling */
 .gallery-container {
   width: 100vw;
   height: 100vh;
@@ -35,6 +48,7 @@ code {
   flex-wrap: wrap;
   padding: 10px;
 }
+
 .gallery-item {
   width: 240px;
   height: 240px;

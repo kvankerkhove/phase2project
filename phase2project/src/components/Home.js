@@ -1,27 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Login from "./Login"
+import Logout from "./Logout"
 
-function Home() {
+function Home({handleLogin, username, isLoggedIn, handleLogout}) {
+    const [users, setUsers] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:3000/users')
+        .then(res => res.json())
+        .then(data => setUsers(data))
+    }, [])
   return (
     <div className="home">
-        <h1>Welcome to Finstagram</h1>
-        <h3>Please Sign In</h3>
-        <form>
-            <div>
-                <label for="username">Username: </label>
-                <input type="text" id="username" name="username"/>
-            </div>
-            <br></br>
-            <div>
-                <label for="pass">Password: </label>
-                <input type="password" id="pass" name="password"/>
-            </div>
-            <br></br>
-            <input type="submit" value="Sign in"/>
-        </form>
+        {isLoggedIn ? <Logout username={username} handleLogout={handleLogout}/> : <Login users={users} handleLogin={handleLogin}/>}
     </div>
   )
 }
-
 export default Home
 
 

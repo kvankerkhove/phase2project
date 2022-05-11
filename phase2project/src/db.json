@@ -1,17 +1,39 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "img_url": "https://cdn.shopify.com/s/files/1/1358/2883/products/Classic-Flower-Wrap-Bright-Cheery-001_1024x1024.jpg?v=1628819601",
-            "caption": "Flower Bouquet",
-            "location": "Garden"
-        },
-
-        {
-            "id": 2,
-            "img_url": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2021/02/GettyImages-997141470-e1614176377827.jpg",
-            "caption": "The cutest lil bb",
-            "location": "Heaven"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "img_url": "https://cdn.shopify.com/s/files/1/1358/2883/products/Classic-Flower-Wrap-Bright-Cheery-001_1024x1024.jpg?v=1628819601",
+      "caption": "Flower Bouquet",
+      "location": "Garden"
+    },
+    {
+      "id": 2,
+      "img_url": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2021/02/GettyImages-997141470-e1614176377827.jpg",
+      "caption": "The cutest lil bb",
+      "location": "Heaven"
+    },
+    {
+      "img_url": "hello",
+      "caption": "",
+      "location": "",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "kvankerkhove",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "username": "jnewman",
+      "password": "5678"
+    },
+    {
+      "username": "jessica",
+      "password": "1234",
+      "id": 3
+    }
+  ]
 }
