@@ -13,6 +13,7 @@ function App() {
   const [users, setUsers] = useState([])
   const [updatedUsers, setUpdatedUsers] = useState(users)
   const [currentId, setCurrentId] = useState("")
+  const [pageNumber, setPageNumber] = useState(1)
 
   const history = useHistory()
 
@@ -64,9 +65,15 @@ function App() {
     setUpdatedUsers([...users, newUser])
   }
 
+  const handleExploreRefresh = () => {
+    setPageNumber((pageNumber) => pageNumber + 1)
+  }
+
+
+
   return (
     <div>
-      <NavBar />
+      <NavBar handleExploreRefresh={handleExploreRefresh}/>
       <Switch>
         <Route path="/posts">
           <Feed posts={posts} isLoggedIn={isLoggedIn}/>
@@ -75,7 +82,7 @@ function App() {
           <Form posts={posts} renderData={renderData} isLoggedIn={isLoggedIn} currentId={currentId}/>
         </Route>
         <Route path="/explore">
-          <ExplorePage isLoggedIn={isLoggedIn}/>
+          <ExplorePage isLoggedIn={isLoggedIn} pageNumber={pageNumber}/>
         </Route>
         <Route exact path="/">
           <Home handleLogin={handleLogin} currentUsername={currentUsername} isLoggedIn={isLoggedIn} handleLogout={handleLogout} users={users} updatedUsers={updatedUsers} updateUsers={updateUsers}/>

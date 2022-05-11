@@ -4,7 +4,7 @@ import { FaHome } from 'react-icons/fa';
 import { IoIosAddCircle, IoIosSearch }  from 'react-icons/io';
 import { MdFeed } from 'react-icons/md';
 
-function NavBar() {
+function NavBar({handleExploreRefresh}) {
   return (
     <div className="nav-bar">
         <NavLink className="nav-link" to="/">
@@ -17,7 +17,7 @@ function NavBar() {
             <MdFeed />
         </NavLink>
         <NavLink className="nav-link" to="/explore">
-            <IoIosSearch />
+            <IoIosSearch onClick={handleExploreRefresh} />
         </NavLink>
     </div>
   )
