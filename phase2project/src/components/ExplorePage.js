@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 function ExplorePage({ isLoggedIn, pageNumber }) {
   const [photos, setPhotos] = useState([])
 
-  const key="Hyf0HsPVj552DpIjTOH_TDzIg-bMeeb3-9vNR5Zlvr4"
+  const key= process.env.REACT_APP_API_KEY
   const url=`https://api.unsplash.com/photos?page=${pageNumber}&client_id=${key}`
 
 

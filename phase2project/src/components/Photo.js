@@ -17,6 +17,7 @@ function Photo({post}) {
     const {id, img_url, caption, location} = post
   return (
     <div className="myphoto">
+        <button className='deletebutton'>x</button>
         <medium><MdLocationOn />{location}</medium>
         <br></br>
         <img src={img_url} alt="There should be a photo here" height="500px" width="500px"/>
