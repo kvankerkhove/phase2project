@@ -1,38 +1,65 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "img_url": "https://cdn.shopify.com/s/files/1/1358/2883/products/Classic-Flower-Wrap-Bright-Cheery-001_1024x1024.jpg?v=1628819601",
-      "caption": "Flower Bouquet",
-      "location": "Garden"
-    },
-    {
-      "id": 2,
-      "img_url": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2021/02/GettyImages-997141470-e1614176377827.jpg",
-      "caption": "The cutest lil bb",
-      "location": "Heaven"
-    },
-    {
-      "img_url": "hello",
-      "caption": "",
-      "location": "",
-      "id": 3
-    }
-  ],
   "users": [
     {
       "id": 1,
       "username": "kvankerkhove",
-      "password": "1234"
+      "password": "1234",
+      "posts": [
+        {
+          "id": 1,
+          "img_url": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2021/02/GettyImages-997141470-e1614176377827.jpg",
+          "caption": "The cutest lil bb",
+          "location": "Heaven"
+        }
+      ]
     },
     {
       "id": 2,
       "username": "jnewman",
-      "password": "5678"
+      "password": "5678",
+      "posts": [
+        {
+          "img_url": "https://media.timeout.com/images/105856758/image.jpg",
+          "caption": "",
+          "location": ""
+        },
+        {
+          "img_url": "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=",
+          "caption": "waterfall",
+          "location": ""
+        },
+        {
+          "img_url": "https://static.onecms.io/wp-content/uploads/sites/23/2022/02/18/spring-activities-2000.jpg",
+          "caption": "",
+          "location": "flatiron"
+        },
+        {
+          "img_url": "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=",
+          "caption": "It's spring",
+          "location": ""
+        },
+        {
+          "img_url": "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=",
+          "caption": "!!!!",
+          "location": ""
+        },
+        {
+          "img_url": "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=",
+          "caption": "test",
+          "location": ""
+        }
+      ]
     },
     {
       "username": "jessica",
       "password": "1234",
+      "posts": [
+        {
+          "img_url": "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=",
+          "caption": "yayyy",
+          "location": ""
+        }
+      ],
       "id": 3
     }
   ]

@@ -7,29 +7,61 @@ import ExplorePage from './ExplorePage';
 import Form from './Form';
 
 function App() {
-  const [username, setUsername] = useState("")
+  const [currentUsername, setCurrentUsername] = useState("")
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [posts, setPosts] = useState([])
+  const [users, setUsers] = useState([])
+  const [updatedUsers, setUpdatedUsers] = useState(users)
+  const [currentId, setCurrentId] = useState("")
 
   const history = useHistory()
 
+  console.log(posts)
+
   useEffect(() => {
-    fetch('http://localhost:3000/posts')
-    .then(res => res.json())
-    .then(data => setPosts(data))
-  }, [])
+    if(currentUsername !== ""){
+      const currentUser = updatedUsers.find(user => { 
+        return user.username === currentUsername
+      })
+  
+      setCurrentId(currentUser.id)
+    }
+  }, [currentUsername])
+
+  //Grabs users
+    useEffect(() => {
+        fetch("http://localhost:3000/users")
+        .then(res => res.json())
+        .then(data => setUsers(data))
+    }, [])
+
+    //Grabs posts
+    useEffect(() => {
+      fetch(`http://localhost:3000/users/${currentId}`)
+      .then(res => res.json())
+      .then(data => setPosts(data.posts))
+    }, [currentId])
+
+  //Sets updated users
+  useEffect(() => {
+    setUpdatedUsers(users)
+}, [users])
 
   function renderData(formData) { 
-    setPosts([...posts, formData])
+    setPosts(formData.posts)
   }
 
   const handleLogin = (loginInfo) => {
-    setUsername(loginInfo.username)
+    setCurrentUsername(loginInfo.username)
     setIsLoggedIn(true)
     history.push("/")
   }
   const handleLogout = () => {
     setIsLoggedIn(false)
+  }
+
+  const updateUsers = (newUser) => { 
+    setUpdatedUsers([...users, newUser])
   }
 
   return (
@@ -40,13 +72,13 @@ function App() {
           <Feed posts={posts} isLoggedIn={isLoggedIn}/>
         </Route>
         <Route path="/new">
-          <Form renderData={renderData} isLoggedIn={isLoggedIn}/>
+          <Form posts={posts} renderData={renderData} isLoggedIn={isLoggedIn} currentId={currentId}/>
         </Route>
         <Route path="/explore">
           <ExplorePage isLoggedIn={isLoggedIn}/>
         </Route>
         <Route exact path="/">
-          <Home handleLogin={handleLogin} username={username} isLoggedIn={isLoggedIn} handleLogout={handleLogout}/>
+          <Home handleLogin={handleLogin} currentUsername={currentUsername} isLoggedIn={isLoggedIn} handleLogout={handleLogout} users={users} updatedUsers={updatedUsers} updateUsers={updateUsers}/>
         </Route>
       </Switch>
     </div>

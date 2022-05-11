@@ -15,7 +15,7 @@ const Div = styled.div`
     margin-right: 30%;
 `
 
-function Form({renderData, isLoggedIn}) {
+function Form({renderData, isLoggedIn, currentId, posts}) {
   const history = useHistory()
   const [form, setForm] = useState({ 
     img_url: "", 
@@ -32,15 +32,15 @@ function Form({renderData, isLoggedIn}) {
 
   function handleSubmit (e) { 
     e.preventDefault()
-    fetch ("http://localhost:3000/posts", { 
-      method: "POST", 
+    fetch (`http://localhost:3000/users/${currentId}`, { 
+      method: "PATCH", 
       headers: { 
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form)
+      body: JSON.stringify({posts: [...posts, form]})
     })
     .then(response => response.json())
-    .then(formData => {renderData(formData)})
+    .then(formData => renderData(formData))
       setForm({ 
         img_url: "", 
         caption: "", 

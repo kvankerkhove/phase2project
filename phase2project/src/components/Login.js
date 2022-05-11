@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import Signup from './Signup'
 import styled from 'styled-components'
 
@@ -13,21 +13,19 @@ const Div = styled.div`
     margin-left: 30%;
     margin-right: 30%;
 `
-function Login({handleLogin, users}) {
+function Login({handleLogin, users, updatedUsers, updateUsers}) {
     const [formData, setFormData] = useState({
         username: "",
         password: ""
     })
     const [signUp, setSignUp] = useState(false)
     const [loginIsCorrect, setLoginIsCorrect] = useState(true)
-    const [updatedUsers, setUpdatedUsers] = useState(users)
-    useEffect(() => {
-        setUpdatedUsers(users)
-    }, [users])
+
     const handleChange = (e) => {
         const {name, value} = e.target
         setFormData({...formData, [name]:value})
     }
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const foundUser = updatedUsers.find(user => {
@@ -39,16 +37,17 @@ function Login({handleLogin, users}) {
             setLoginIsCorrect(false)
         }
     }
+
     const handleSignUp = (e) => {
         setSignUp(true)
     }
+
     const onSignUpClick = (newUser) => {
         setSignUp(false)
-        setUpdatedUsers([...users, newUser])
+        updateUsers(newUser)
         setFormData(newUser)
     }
-    console.log(formData)
-    console.log(updatedUsers)
+
   return (
     <Div>
         <h1>Welcome to Gallery</h1>

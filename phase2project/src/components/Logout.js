@@ -1,9 +1,9 @@
 import React from 'react'; 
 
-function Logout({username, handleLogout}) {
+function Logout({currentUsername, handleLogout}) {
   return (
       <div>
-          <h1>Welcome, {username}</h1>
+          <h1>Welcome, {currentUsername}</h1>
           <button onClick={handleLogout}>Logout</button>
       </div>
   )
