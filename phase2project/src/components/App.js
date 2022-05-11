@@ -17,7 +17,26 @@ function App() {
 
   const history = useHistory()
 
-  console.log(posts)
+
+
+  const handleDelete = (deletedPost) => {
+    const filteredPosts = posts.filter(post => post.id !== deletedPost.id)
+    
+    fetch(`http://localhost:3000/users/${currentId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify({posts: filteredPosts})
+    })
+    .then(res => res.json())
+    .then((filteredData) => { 
+      setPosts(filteredData.posts)
+    })
+  }
+
+
+
 
   useEffect(() => {
     if(currentUsername !== ""){
@@ -69,6 +88,7 @@ function App() {
     setPageNumber((pageNumber) => pageNumber + 1)
   }
 
+  
 
 
   return (
@@ -76,7 +96,7 @@ function App() {
       <NavBar handleExploreRefresh={handleExploreRefresh}/>
       <Switch>
         <Route path="/posts">
-          <Feed posts={posts} isLoggedIn={isLoggedIn}/>
+          <Feed posts={posts} isLoggedIn={isLoggedIn} currentUsername={currentUsername} handleDelete={handleDelete}/>
         </Route>
         <Route path="/new">
           <Form posts={posts} renderData={renderData} isLoggedIn={isLoggedIn} currentId={currentId}/>

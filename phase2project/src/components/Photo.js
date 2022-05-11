@@ -13,17 +13,28 @@ import { MdLocationOn } from 'react-icons/md'
 // const Img = styled.img`
 //     padding: 5px;
 // `
-function Photo({post}) {
+function Photo({post, currentUsername, handleDelete}) {
     const {id, img_url, caption, location} = post
+
+    // const handleDelete = () => {
+    //   console.log(post)
+    //   fetch(`http://localhost:3000/users/${currentId}`, {
+    //     method: "PATCH",
+    //     headers: {
+    //       "Content-Type" : "application/json"
+    //     },
+    //     body: JSON.stringify(post)
+    //   })
+    //   .then(res => res.json())
+    //   .then(() => {})
+    // }
   return (
     <div className="myphoto">
-        <button className='deletebutton'>x</button>
         <medium><MdLocationOn />{location}</medium>
-        <br></br>
-        <img src={img_url} alt="There should be a photo here" height="500px" width="500px"/>
-        <br></br>
-        <large>♡ </large>
-        <medium>{caption}</medium>
+        <img className='image' src={img_url} alt="There should be a photo here" height="500px" width="500px"/>
+        <large className="likebutton">♡ </large>
+        <medium><b>{currentUsername} </b>{caption}</medium>
+        <button onClick={() => handleDelete(post)} className='deletebutton'>x</button>
     </div>
   )
 }

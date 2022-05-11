@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useHistory, Redirect } from "react-router-dom";
 import styled from 'styled-components'
+import { v4 as uuidv4 } from 'uuid';
 
 
 const Div = styled.div`
@@ -20,14 +21,14 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
   const [form, setForm] = useState({ 
     img_url: "", 
     caption: "", 
-    location: "",
+    location: ""
   })
 
   if (!isLoggedIn) return <Redirect exact to="/" />;
 
   function handleChange(e) { 
     const {name, value} = e.target
-    setForm((prevForm => ({...prevForm, [name]: value})))
+    setForm((prevForm => ({...prevForm, [name]: value, id: parseInt(uuidv4(), 10)})))
   }
 
   function handleSubmit (e) { 
@@ -52,7 +53,7 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
   return (
     <Div>
       <form className="form" onSubmit={(e) => handleSubmit(e)}>
-      <h1>Submit a New Post</h1>
+      <h1 style={{color: "pink"}}>Submit a New Post</h1>
         <div>
         <label> Image: </label>
           <input
