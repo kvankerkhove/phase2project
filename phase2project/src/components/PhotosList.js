@@ -6,7 +6,7 @@ function PhotosList({posts}) {
         return <Photo key={post.id} post={post} />
     })
   return (
-    <div>
+    <div className="myphotolist">
         {renderPosts}
     </div>
   )

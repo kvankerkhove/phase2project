@@ -3,10 +3,15 @@ import Signup from './Signup'
 import styled from 'styled-components'
 
 const Div = styled.div`
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 10px;
-    box-shadow: 5px 5px 1px black;
+    box-shadow: 5px 5px 1px pink;
     margin-top: 50px;
+    color: black;
+    background: white;
+    width: 500px;
+    margin-left: 30%;
+    margin-right: 30%;
 `
 function Login({handleLogin, users}) {
     const [formData, setFormData] = useState({

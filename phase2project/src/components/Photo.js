@@ -2,26 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 import { MdLocationOn } from 'react-icons/md'
 
-const Div = styled.div`
-    background: pink;
-    border: 2px solid black;
-    padding: 10px;
-    margin-top: 10px;
-`
-const Img = styled.img`
-    padding: 5px;
-`
+// const Div = styled.div`
+//     width: 240px;
+//     height: 240px;
+//     padding: 10px;
+//     background-color: white;
+//     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+//     margin: 10px;
+// `
+// const Img = styled.img`
+//     padding: 5px;
+// `
 function Photo({post}) {
     const {id, img_url, caption, location} = post
   return (
-    <Div>
+    <div className="myphoto">
         <medium><MdLocationOn />{location}</medium>
         <br></br>
-        <Img src={img_url} alt="There should be a photo here" height="400px"/>
+        <img src={img_url} alt="There should be a photo here" height="500px" width="500px"/>
         <br></br>
         <large>♡ </large>
         <medium>{caption}</medium>
-    </Div>
+    </div>
   )
 }
 export default Photo

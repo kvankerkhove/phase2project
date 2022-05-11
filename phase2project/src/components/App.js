@@ -26,7 +26,7 @@ function App() {
   const handleLogin = (loginInfo) => {
     setUsername(loginInfo.username)
     setIsLoggedIn(true)
-    history.push("/posts")
+    history.push("/")
   }
   const handleLogout = () => {
     setIsLoggedIn(false)
@@ -37,13 +37,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/posts">
-          <Feed posts={posts}/>
+          <Feed posts={posts} isLoggedIn={isLoggedIn}/>
         </Route>
         <Route path="/new">
-          <Form renderData={renderData}/>
+          <Form renderData={renderData} isLoggedIn={isLoggedIn}/>
         </Route>
         <Route path="/explore">
-          <ExplorePage/>
+          <ExplorePage isLoggedIn={isLoggedIn}/>
         </Route>
         <Route exact path="/">
           <Home handleLogin={handleLogin} username={username} isLoggedIn={isLoggedIn} handleLogout={handleLogout}/>
