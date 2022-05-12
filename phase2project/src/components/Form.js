@@ -28,7 +28,7 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
 
   function handleChange(e) { 
     const {name, value} = e.target
-    setForm((prevForm => ({...prevForm, [name]: value, id: parseInt(uuidv4(), 10)})))
+    setForm((prevForm => ({...prevForm, [name]: value, id: uuidv4()})))
   }
 
   function handleSubmit (e) { 

@@ -4,13 +4,27 @@
       "id": 1,
       "username": "kvankerkhove",
       "password": "1234",
-      "posts": []
+      "posts": [
+        {
+          "img_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F08%2F13%2Fborder-collie-pup-walking-688060557-2000.jpg",
+          "caption": "cute puppy",
+          "location": "",
+          "id": "31312c5e-d267-46fd-ac30-f3c984c48e4c"
+        }
+      ]
     },
     {
       "id": 2,
       "username": "jnewman",
       "password": "5678",
-      "posts": []
+      "posts": [
+        {
+          "img_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F08%2F13%2Fborder-collie-pup-walking-688060557-2000.jpg",
+          "caption": "dfdf",
+          "location": "",
+          "id": 9
+        }
+      ]
     },
     {
       "username": "jessica",

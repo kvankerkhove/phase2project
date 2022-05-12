@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import Signup from './Signup'
 import styled from 'styled-components'
+import Button from 'react-bootstrap/Button'
 
 const Div = styled.div`
     border: 1px solid white;
@@ -63,7 +64,8 @@ function Login({handleLogin, users, updatedUsers, updateUsers}) {
             </div>
             {loginIsCorrect ? null : <small style={{color: "red"}}>username or password is incorrect</small>}
             <br></br>
-            <input type="submit" value="Log in"/>
+            {/* <input type="submit" value="Log in"/> */}
+            <Button type="submit" variant="outline-primary">Login</Button>{' '}
         </form>
         {signUp
         ? <Signup onSignUpClick={onSignUpClick} />
