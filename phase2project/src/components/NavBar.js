@@ -5,9 +5,9 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 
-function NavBar({handleExploreRefresh}) {
+function NavBar() {
     const [sidebar, setSidebar] = useState(false)
-    
+
     const showSidebar = () => setSidebar(!sidebar)
 
   return (

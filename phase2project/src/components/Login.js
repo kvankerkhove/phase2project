@@ -10,11 +10,10 @@ const Div = styled.div`
     color: #060b26;
     background: beige;
     width: 500px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin: auto;
     font-family: 'Poppins', sans-serif;
 `
-function Login({handleLogin, users, updatedUsers, updateUsers}) {
+function Login({handleLogin, updatedUsers, updateUsers}) {
     const [formData, setFormData] = useState({
         username: "",
         password: ""
@@ -78,4 +77,4 @@ function Login({handleLogin, users, updatedUsers, updateUsers}) {
     </Div>
   )
 }
-export default Login
+export default Login; 

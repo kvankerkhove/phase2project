@@ -1,10 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { MdLocationOn } from 'react-icons/md'
-import CloseButton  from 'react-bootstrap/CloseButton'
+import React from 'react';
+import { MdLocationOn } from 'react-icons/md';
+import CloseButton  from 'react-bootstrap/CloseButton';
 
 function Photo({post, currentUsername, handleDelete}) {
-    const {id, img_url, caption, location} = post
+    const { img_url, caption, location} = post
 
   return (
     <div className="myphoto">

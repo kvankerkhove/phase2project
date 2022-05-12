@@ -12,8 +12,7 @@ const Div = styled.div`
     color: #060b26;
     background: beige;
     width: 600px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin: auto;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;

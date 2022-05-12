@@ -3,12 +3,10 @@ import PhotosList from './PhotosList';
 import { Redirect } from "react-router-dom";
 import styled from 'styled-components';
 
-
 const H1 = styled.h1`
     color: white;
     font-family: 'Poppins', sans-serif;
 `
-
 
 function Feed({posts, isLoggedIn, currentUsername, handleDelete}) {
 

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import Login from "./Login"
-import Logout from "./Logout"
+import React from 'react';
+import Login from "./Login";
+import Logout from "./Logout";
 
 function Home({handleLogin, currentUsername, isLoggedIn, handleLogout, users, updatedUsers, updateUsers}) {
 
