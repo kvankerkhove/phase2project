@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+
 function Signup({onSignUpClick}) {
     const [signUpData, setSignUpData] = useState({
         username: "",

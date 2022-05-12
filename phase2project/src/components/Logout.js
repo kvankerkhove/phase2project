@@ -1,5 +1,6 @@
 import React from 'react'; 
 import styled from 'styled-components';
+import Button from 'react-bootstrap/Button';
 
 function Logout({currentUsername, handleLogout}) {
 
@@ -10,7 +11,7 @@ function Logout({currentUsername, handleLogout}) {
   return (
       <div className="welcome">
           <H1 className="welcome-message">Welcome, {currentUsername}!</H1>
-          <button onClick={handleLogout}>Logout</button>
+          <Button onClick={handleLogout} className="logout-button" >Logout</Button>
       </div>
   )
 }
