@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useHistory, Redirect } from "react-router-dom";
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid';
+import Button from 'react-bootstrap/Button';
 
 
 const Div = styled.div`
@@ -90,7 +91,7 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
         </div>
         <div>
           <br></br>
-          <button>Add new picture!</button>
+          <Button type="submit" variant="outline-primary">Add new picture!</Button>
         </div>
       </form>
     </Div>

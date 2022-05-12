@@ -1,6 +1,14 @@
 import React from 'react';
 import PhotosList from './PhotosList';
 import { Redirect } from "react-router-dom";
+import styled from 'styled-components';
+
+
+const H1 = styled.h1`
+    color: white;
+    font-family: 'Poppins', sans-serif;
+`
+
 
 function Feed({posts, isLoggedIn, currentUsername, handleDelete}) {
 
@@ -8,7 +16,7 @@ function Feed({posts, isLoggedIn, currentUsername, handleDelete}) {
 
   return (
     <div>
-        {posts.length === 0 ? <h1 style={{color: 'white'}} >Create your first post!</h1> : <PhotosList posts={posts} currentUsername={currentUsername} handleDelete={handleDelete}/> }
+        {posts.length === 0 ? <H1>Create your first post!</H1> : <PhotosList posts={posts} currentUsername={currentUsername} handleDelete={handleDelete}/> }
     </div>
   )
 }

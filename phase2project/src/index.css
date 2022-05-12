@@ -134,17 +134,15 @@ span {
 .deletebutton {
   font-size: 10px;
   align-self: flex-start;
-  margin-left: 13px;
 }
 
 .image {
   align-self: center;
 }
 
-.likebutton {
+.location {
   align-self: flex-start;
-  margin-left: 15px;
-  font-size: 20px;
+  margin-left: 5px;
 }
 
 /* Explore Page Styling*/

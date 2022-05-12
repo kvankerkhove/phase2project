@@ -11,19 +11,19 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Form',
+    title: 'Add Post',
     path: '/new',
     icon: <IoIosAddCircle />,
     cName: 'nav-text'
   },
   {
-    title: 'Posts',
+    title: 'My Gallery',
     path: '/posts',
     icon: <MdFeed/>,
     cName: 'nav-text'
   },
   {
-    title: 'Explore',
+    title: 'Explore Page',
     path: '/explore',
     icon: <IoIosSearch />,
     cName: 'nav-text'
