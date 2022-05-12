@@ -1,5 +1,5 @@
-import React, { useState } from 'react'; 
-
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button'
 function Signup({onSignUpClick}) {
     const [signUpData, setSignUpData] = useState({
         username: "",
@@ -36,7 +36,7 @@ function Signup({onSignUpClick}) {
                 <input type="password" id="pass" name="password" value={signUpData.password} onChange={handleOnChange}/>
             </div>
             <br></br>
-            <input type="submit" value="Sign Up"/>
+            <Button type="submit" variant="outline-primary">Sign Up</Button>{' '}
         </form>
     </div>
   )

@@ -1,32 +1,14 @@
-import React, {useState, useEffect} from 'react'; 
-import ExploreItem from './ExploreItem';
+import React from 'react';
+import SearchPhotos from './SearchPhotos';
 import { Redirect } from 'react-router-dom';
 
-function ExplorePage({ isLoggedIn, pageNumber }) {
-  const [photos, setPhotos] = useState([])
-
-  const key= process.env.REACT_APP_API_KEY
-  const url=`https://api.unsplash.com/photos?page=${pageNumber}&client_id=${key}`
-
-
-  useEffect(() => {
-      fetch(url)
-      .then(response=>response.json())
-      .then(data=>setPhotos(data))
-  }, [pageNumber])
-  
-
-  // useEffect(() => { 
-  //   fetchRequest()
-  // }, [])
+function ExplorePage({ isLoggedIn }) {
 
   if (!isLoggedIn) return <Redirect exact to="/" />;
 
   return (
-    <div className="gallery-container">
-      {photos.map(photo => { 
-        return <ExploreItem key={photo.id} url={photo.urls.regular}/>
-      })}
+    <div className="search-container">
+      <SearchPhotos />
     </div>
   )
 }

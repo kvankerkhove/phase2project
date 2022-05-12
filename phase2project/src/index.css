@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,19 +7,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* display: flex; */
   text-align: center;
   justify-content: center;
-  background-color: black;
+  background-color: #060b26;
 }
+
+.home { 
+  background-image: url('https://wallpaperaccess.com/full/5242273.jpg');
+  height: 100vh;
+  background-size: cover;
+}
+
+/* .form { 
+  background-image: url('https://i.pinimg.com/originals/c5/1c/e9/c51ce922684d99cf5e1cc776648d1a19.jpg');
+  height: 100vh;
+  background-size: cover;
+  width: 100vw;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.home h1 {
-  color: pink
 }
 
 .form{   
@@ -100,39 +110,6 @@ span {
   margin-left: 16px;
 }
 
-/* Nav Bar Styling*/
-/* .nav-link { 
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-bar {
-  padding: 10px;
-  width: 250px;
-  font-size: 50px;
-} */
-
-/* Explore page styling */
-.gallery-container {
-  width: 100vw;
-  height: 100vh;
-  /* position: relative; */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-.gallery-item {
-  width: 240px;
-  height: 240px;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-}
-
 .myphotolist {
   position: absolute;
   display: flex;
@@ -142,8 +119,6 @@ span {
   padding: 10px;
   margin-left: 30%;
   margin-right: 30%;
-
-  
 }
 
 .myphoto {
@@ -151,12 +126,10 @@ span {
   height: 50%;
   padding: 10px;
   background-color: white;
-  box-shadow: 5px 5px 0px 0px pink; 
   margin-top: 20px;
   display: flex;
   flex-direction: column;
 } 
-
 
 .deletebutton {
   font-size: 10px;
@@ -172,4 +145,79 @@ span {
   align-self: flex-start;
   margin-left: 15px;
   font-size: 20px;
+}
+
+/* Explore Page Styling*/
+.search-input {
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+.search-button {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.search-button:hover {
+  background-color: grey;
+}
+
+.search-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form {
+  display: grid;
+}
+
+.search-label {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-list {
+  column-count: 3;
+}
+
+.card {
+  background-color: #060b26;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.card--image {
+  flex: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .search-form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .search-input {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .card-list {
+        column-count: 1;
+    }
 }

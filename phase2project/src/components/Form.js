@@ -7,13 +7,15 @@ import { v4 as uuidv4 } from 'uuid';
 const Div = styled.div`
     border: 1px solid white;
     padding: 10px;
-    box-shadow: 5px 5px 1px pink;
-    margin-top: 50px;
-    color: black;
-    background: white;
-    width: 500px;
+    border-radius: 5px;
+    color: #060b26;
+    background: beige;
+    width: 600px;
     margin-left: 30%;
     margin-right: 30%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
 `
 
 function Form({renderData, isLoggedIn, currentId, posts}) {
@@ -53,7 +55,7 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
   return (
     <Div>
       <form className="form" onSubmit={(e) => handleSubmit(e)}>
-      <h1 style={{color: "pink"}}>Submit a New Post</h1>
+      <h1 style={{color: '#060b26'}}>Submit a New Post</h1>
         <div>
         <label> Image: </label>
           <input

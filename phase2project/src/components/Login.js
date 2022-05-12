@@ -1,18 +1,18 @@
-import React, { useState} from 'react'
-import Signup from './Signup'
-import styled from 'styled-components'
-import Button from 'react-bootstrap/Button'
+import React, { useState} from 'react';
+import Signup from './Signup';
+import styled from 'styled-components';
+import Button from 'react-bootstrap/Button';
 
 const Div = styled.div`
     border: 1px solid white;
     padding: 10px;
-    box-shadow: 5px 5px 1px pink;
-    margin-top: 50px;
-    color: black;
-    background: white;
+    border-radius: 5px;
+    color: #060b26;
+    background: beige;
     width: 500px;
     margin-left: 30%;
     margin-right: 30%;
+    font-family: 'Poppins', sans-serif;
 `
 function Login({handleLogin, users, updatedUsers, updateUsers}) {
     const [formData, setFormData] = useState({
@@ -50,9 +50,9 @@ function Login({handleLogin, users, updatedUsers, updateUsers}) {
     }
 
   return (
-    <Div>
+    <Div >
         <h1>Welcome to Gallery</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
             <div>
                 <label htmlFor="username">Username: </label>
                 <input type="text" id="username" name="username" value={formData.username} onChange={handleChange}/>
@@ -64,15 +64,15 @@ function Login({handleLogin, users, updatedUsers, updateUsers}) {
             </div>
             {loginIsCorrect ? null : <small style={{color: "red"}}>username or password is incorrect</small>}
             <br></br>
-            {/* <input type="submit" value="Log in"/> */}
             <Button type="submit" variant="outline-primary">Login</Button>{' '}
         </form>
+        <br></br>
         {signUp
         ? <Signup onSignUpClick={onSignUpClick} />
         : (
             <>
                 <small>New to Gallery? </small>
-                <button onClick={handleSignUp} id="signup-btn">Sign Up</button>
+                <Button variant="outline-primary" onClick={handleSignUp} id="signup-btn" style={{fontSize: '10px'}}>Sign Up</Button>{' '}
             </>
         )}
     </Div>
