@@ -5,7 +5,8 @@ import CloseButton  from 'react-bootstrap/CloseButton';
 function Signup({onSignUpClick, setSignUp}) {
     const [signUpData, setSignUpData] = useState({
         username: "",
-        password: ""
+        password: "",
+        posts: []
     })
     const handleSubmit = (e) => {
         e.preventDefault()
