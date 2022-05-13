@@ -6,9 +6,9 @@ import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 
 function NavBar() {
-    const [sidebar, setSidebar] = useState(false)
+const [sidebar, setSidebar] = useState(false)
 
-    const showSidebar = () => setSidebar(!sidebar)
+const showSidebar = () => setSidebar(!sidebar)
 
   return (
     <>

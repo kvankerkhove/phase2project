@@ -17,8 +17,6 @@ function App() {
 
   const history = useHistory()
 
-
-
   const handleDelete = (deletedPost) => {
     const filteredPosts = posts.filter(post => post.id !== deletedPost.id)
     
@@ -34,9 +32,6 @@ function App() {
       setPosts(filteredData.posts)
     })
   }
-
-
-
 
   useEffect(() => {
     if(currentUsername !== ""){
@@ -65,7 +60,7 @@ function App() {
   //Sets updated users
   useEffect(() => {
     setUpdatedUsers(users)
-}, [users])
+  }, [users])
 
   function renderData(formData) { 
     setPosts(formData.posts)
@@ -87,9 +82,6 @@ function App() {
   const handleExploreRefresh = () => {
     setPageNumber((pageNumber) => pageNumber + 1)
   }
-
-  
-
 
   return (
     <div>

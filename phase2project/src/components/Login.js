@@ -2,7 +2,6 @@ import React, { useState} from 'react';
 import Signup from './Signup';
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
-import image from '../images/gallerylogo.png'
 
 const Div = styled.div`
     border: 1px solid white;
@@ -16,6 +15,7 @@ const Div = styled.div`
     display: flex;
     flex-direction: column;
 `
+
 function Login({handleLogin, updatedUsers, updateUsers}) {
     const [formData, setFormData] = useState({
         username: "",
@@ -52,11 +52,8 @@ function Login({handleLogin, updatedUsers, updateUsers}) {
         setFormData(newUser)
     }
 
-
-
   return (
     <Div >
-        {/* <img src={image} alt='logo' width="100px"/> */}
         <h2>Welcome to Gallery</h2>
         <form onSubmit={handleSubmit} >
             <div>

@@ -1,6 +1,5 @@
 import React, {useState} from 'react'; 
 import Unsplash, { toJson } from 'unsplash-js';
-import search from 'unsplash-js/lib/methods/search';
 
 function SearchPhotos() {
 const [query, setQuery] = useState("");
