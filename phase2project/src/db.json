@@ -6,10 +6,22 @@
       "password": "1234",
       "posts": [
         {
-          "img_url": "https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg",
-          "caption": "pretty",
-          "location": "flatiron",
-          "id": "dbd0710a-ba5d-4141-916e-3e65e7cbc2ab"
+          "img_url": "https://d.newsweek.com/en/full/1926294/border-collie-dog.jpg?w=1600&h=1600&q=88&f=008e8b2ed2e9bd4bbd82cfa4e1ec637f",
+          "caption": "such a good boy",
+          "location": "Hudson, NY",
+          "id": "2a65187c-d762-4053-a382-ccdfc9f95484"
+        },
+        {
+          "img_url": "https://www.omnihotels.com/-/media/images/hotels/phxrst/activities/omni-scottsdale-sedona-3.jpg?h=660&la=en&w=1170",
+          "caption": "beautiful hike in the red rocks",
+          "location": "Sedona, Arizona",
+          "id": "b6f4fe36-f53a-41ab-a2c9-f91723636e88"
+        },
+        {
+          "img_url": "https://wallpapercave.com/wp/wp2374905.jpg",
+          "caption": "Sunflowers!! 🌻 ",
+          "location": "Upstate NY",
+          "id": "996f3957-0781-44b8-8774-7ea4a3db261d"
         }
       ]
     },

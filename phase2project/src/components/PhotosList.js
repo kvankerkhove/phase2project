@@ -1,5 +1,11 @@
 import React from 'react'
 import Photo from './Photo'
+import styled from 'styled-components'
+
+const H1 = styled.h1`
+  font-family: 'Poppins', sans-serif;
+  color: #ffe7c2;
+`
 
 function PhotosList({posts, currentUsername, handleDelete}) {
     const renderPosts = posts.map(post => {
@@ -8,6 +14,7 @@ function PhotosList({posts, currentUsername, handleDelete}) {
     
   return (
     <div className="myphotolist">
+        <H1>My Photo Gallery</H1>
         {renderPosts}
     </div>
   )

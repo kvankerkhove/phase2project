@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import Signup from './Signup';
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
+import image from '../images/gallerylogo.png'
 
 const Div = styled.div`
     border: 1px solid white;
@@ -55,6 +56,7 @@ function Login({handleLogin, updatedUsers, updateUsers}) {
 
   return (
     <Div >
+        {/* <img src={image} alt='logo' width="100px"/> */}
         <h2>Welcome to Gallery</h2>
         <form onSubmit={handleSubmit} >
             <div>

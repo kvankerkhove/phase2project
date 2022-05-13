@@ -12,10 +12,15 @@ const Div = styled.div`
     color: #060b26;
     background: #ffe7c2;
     width: 600px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
+`
+const H1 = styled.h1`
+  font-family: 'Poppins', sans-serif;
+  color: #ffe7c2;
 `
 
 function Form({renderData, isLoggedIn, currentId, posts}) {
@@ -53,47 +58,49 @@ function Form({renderData, isLoggedIn, currentId, posts}) {
     }
 
   return (
-    <Div>
-      <form className="form" onSubmit={(e) => handleSubmit(e)}>
-      <h1 style={{color: '#060b26'}}>Submit a New Post</h1>
-        <div>
-        <label> Image: </label>
-          <input
-            type= "text"
-            name= "img_url"
-            placeholder= "Link to image"
-            value= {form.img_url}
-            onChange = {(e) => handleChange(e)}
-          ></input>
-        </div>
-        <br></br>
-        <div>
-          <label>Caption: </label>
-          <input
-            type= "text"
-            name= "caption"
-            placeholder= "Caption"
-            value= {form.caption}
-            onChange = {(e) => handleChange(e)}
-          ></input>
-        </div>
-        <br></br>
-        <div>
-          <label>Location: </label>
-          <input
-            type= "text"
-            name= "location"
-            placeholder= "Location"
-            value={form.location}
-            onChange = {(e) => handleChange(e)}
-          ></input>
-        </div>
-        <div>
+    <div className="form-container">
+      <H1 className="form-header">Submit a New Post</H1>
+      <Div>
+        <form className="form" onSubmit={(e) => handleSubmit(e)}>
+          <div>
+          <label> Image: </label>
+            <input
+              type= "text"
+              name= "img_url"
+              placeholder= "Link to image"
+              value= {form.img_url}
+              onChange = {(e) => handleChange(e)}
+            ></input>
+          </div>
           <br></br>
-          <Button type="submit" variant="outline-primary">Add new picture!</Button>
-        </div>
-      </form>
-    </Div>
+          <div>
+            <label>Caption: </label>
+            <input
+              type= "text"
+              name= "caption"
+              placeholder= "Caption"
+              value= {form.caption}
+              onChange = {(e) => handleChange(e)}
+            ></input>
+          </div>
+          <br></br>
+          <div>
+            <label>Location: </label>
+            <input
+              type= "text"
+              name= "location"
+              placeholder= "Location"
+              value={form.location}
+              onChange = {(e) => handleChange(e)}
+            ></input>
+          </div>
+          <div>
+            <br></br>
+            <Button type="submit" variant="outline-primary">Add to Gallery</Button>
+          </div>
+        </form>
+      </Div>
+    </div>
   )
 }
 export default Form;

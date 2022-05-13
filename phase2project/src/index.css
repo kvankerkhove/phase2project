@@ -16,7 +16,21 @@ body {
   background-image: url('https://www.creativelive.com/blog/wp-content/uploads/2016/01/lights-night-unsharp-blured.jpg');
   height: 100vh;
   background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
+
+.form-container {
+  background-image: url('https://wallpaperaccess.com/full/3972620.jpg');
+  height: 100vh;
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -34,11 +48,12 @@ code {
 
 /* SideBar css */
 .navbar {
-  background-color: #060b26;
+  /* background-color: #060b26; */
   height: 80px;
   display: flex;
   justify-content: start;
   align-items: center;
+  position: fixed
 }
 
 .menu-bars {
@@ -106,6 +121,8 @@ span {
   margin-left: 16px;
 }
 
+/* photos css */
+
 .myphotolist {
   position: absolute;
   display: flex;
@@ -118,25 +135,42 @@ span {
 }
 
 .myphoto {
-  width: 100%;
+  width: 525px;
   height: 50%;
   padding: 10px;
   background-color: white;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 } 
 
 .deletebutton {
   font-size: 10px;
-  align-self: flex-start;
+  align-self: flex-end;
 }
+
+.image-container {
+  width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+}
+
 
 .image {
-  align-self: center;
+  height: 500px;
+  margin-left: -250px;
+  position: absolute;
 }
 
+
 .location {
+  align-self: flex-start;
+  margin-left: 5px;
+}
+
+.caption {
   align-self: flex-start;
   margin-left: 5px;
 }
