@@ -71,6 +71,7 @@ function App() {
     setIsLoggedIn(true)
     history.push("/")
   }
+  
   const handleLogout = () => {
     setIsLoggedIn(false)
   }
