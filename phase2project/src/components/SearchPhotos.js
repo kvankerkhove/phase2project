@@ -3,7 +3,8 @@ import Unsplash, { toJson } from 'unsplash-js';
 
 function SearchPhotos() {
 const [query, setQuery] = useState("");
-const [searchedPhotos, setSearchedPhotos] = useState([])
+const [searchedPhotos, setSearchedPhotos] = useState([]); 
+
 
 const key= process.env.REACT_APP_API_KEY
 const unsplash = new Unsplash({
@@ -19,7 +20,9 @@ function handlePhotoSearch (e) {
         setSearchedPhotos(json.results);
     })
     setQuery("")
+
 }
+
 
   return (
     <>

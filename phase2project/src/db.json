@@ -41,7 +41,68 @@
     {
       "username": "jessica",
       "password": "1234",
-      "posts": [],
+      "posts": [
+        {
+          "img_url": "https://www.loveyourdog.com/wp-content/uploads/2019/08/Teacup-Yorkie-Pup.jpg",
+          "caption": "So cute",
+          "location": "Yard",
+          "id": "c43f849c-e7ec-4f30-a678-9585a97a0197"
+        },
+        {
+          "img_url": "https://static.onecms.io/wp-content/uploads/sites/28/2021/02/19/new-york-city-evening-NYCTG0221.jpg",
+          "caption": "i <3 NY",
+          "location": "NYC",
+          "id": "7678aa26-eae7-4030-baba-2c3a6030d721"
+        },
+        {
+          "img_url": "https://cdn.shopify.com/s/files/1/0242/4573/1362/products/0002_ORBIT_Glasses_Front_Deep_Etch_d3eab673-dc2e-4e88-aa41-43ce90d86dfd_2000x.jpg?v=1557883660",
+          "caption": "Need these to see",
+          "location": "Amazon",
+          "id": "fe6d44fa-09eb-4a67-96f4-4bc2e00c9133"
+        },
+        {
+          "img_url": "https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d",
+          "caption": "Meow",
+          "location": "In da Studio",
+          "id": "b34c892a-8b1b-47d2-a084-38874ed925c3"
+        },
+        {
+          "img_url": "https://gothammag.com/get/files/image/galleries/sneakers-lefteris-kallergis-unsplash.jpg",
+          "caption": "Kaven, do you like these",
+          "location": "Street",
+          "id": "27227e43-ea69-4783-9ba0-7855edb4a8b6"
+        },
+        {
+          "img_url": "https://www.nationsonline.org/gallery/Switzerland/Sunrise-on-the-Matterhorn.jpg",
+          "caption": "Switzyland",
+          "location": "I think that is the Matterhorn? ",
+          "id": "a40ed089-5f5c-470d-bc8a-f8a80f206bd6"
+        },
+        {
+          "img_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
+          "caption": "Wish I was on the beach",
+          "location": "St. Thomas",
+          "id": "dce3bdc6-5d9d-4fc9-aae6-4eb1ad2dc0c0"
+        },
+        {
+          "img_url": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Marinated-Olives_EXPS_TOHDJ20_22579_B08_06_10b.jpg",
+          "caption": "I love olives",
+          "location": "Restaurant",
+          "id": "2ca650f2-bbd9-4b7a-824b-b5c2a728f3e4"
+        },
+        {
+          "img_url": "https://imgs.6sqft.com/wp-content/uploads/2014/09/21025848/east-7th-street-between-avenue-c-and-d.jpg",
+          "caption": "This is my street 🥰",
+          "location": "East Village",
+          "id": "bc733f81-fbd7-48bb-b8ba-1399813fb47a"
+        },
+        {
+          "img_url": "https://i.guim.co.uk/img/media/4a29dde46c17e8a07f98e4e5947d49964d074923/0_348_6000_3600/master/6000.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=88c75e6319ec9d3588bb6e17ae92ff68",
+          "caption": "Statue of Liberty 🗽",
+          "location": "Middle of the Hudson",
+          "id": "f5d842af-2a51-44ed-ab84-71ba590175d9"
+        }
+      ],
       "id": 3
     }
   ]
