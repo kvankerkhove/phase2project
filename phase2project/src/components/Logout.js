@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 
+
 function Logout({currentUsername, handleLogout}) {
 
   const H1 = styled.h1`

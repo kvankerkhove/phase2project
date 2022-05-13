@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import CloseButton  from 'react-bootstrap/CloseButton';
 
-function Signup({onSignUpClick}) {
+function Signup({onSignUpClick, setSignUp}) {
     const [signUpData, setSignUpData] = useState({
         username: "",
         password: ""
@@ -22,8 +23,10 @@ function Signup({onSignUpClick}) {
         const {name, value} = e.target
         setSignUpData({...signUpData, [name]:value})
     }
+
   return (
     <div>
+        <CloseButton aria-label='Hide' className="closebutton" onClick={() => setSignUp(false)}/>
         <h1>Sign Up!</h1>
         <p>Enter a username and password below</p>
         <form onSubmit={handleSubmit}>

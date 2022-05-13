@@ -10,7 +10,7 @@ const Div = styled.div`
     padding: 10px;
     border-radius: 5px;
     color: #060b26;
-    background: beige;
+    background: #ffe7c2;
     width: 600px;
     margin: auto;
     font-family: 'Poppins', sans-serif;

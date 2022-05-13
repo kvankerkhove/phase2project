@@ -28,6 +28,10 @@ code {
   padding:20px;
 }
 
+.closebutton {
+  align-self: flex-end;
+}
+
 /* SideBar css */
 .navbar {
   background-color: #060b26;

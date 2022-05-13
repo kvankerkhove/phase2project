@@ -8,10 +8,12 @@ const Div = styled.div`
     padding: 10px;
     border-radius: 5px;
     color: #060b26;
-    background: beige;
+    background: #ffe7c2;
     width: 500px;
     margin: auto;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
 `
 function Login({handleLogin, updatedUsers, updateUsers}) {
     const [formData, setFormData] = useState({
@@ -42,15 +44,18 @@ function Login({handleLogin, updatedUsers, updateUsers}) {
         setSignUp(true)
     }
 
+    //for Sign up button
     const onSignUpClick = (newUser) => {
         setSignUp(false)
         updateUsers(newUser)
         setFormData(newUser)
     }
 
+
+
   return (
     <Div >
-        <h1>Welcome to Gallery</h1>
+        <h2>Welcome to Gallery</h2>
         <form onSubmit={handleSubmit} >
             <div>
                 <label htmlFor="username">Username: </label>
@@ -67,11 +72,10 @@ function Login({handleLogin, updatedUsers, updateUsers}) {
         </form>
         <br></br>
         {signUp
-        ? <Signup onSignUpClick={onSignUpClick} />
+        ? <Signup onSignUpClick={onSignUpClick} setSignUp={setSignUp}/>
         : (
             <>
-                <small>New to Gallery? </small>
-                <Button variant="outline-primary" onClick={handleSignUp} id="signup-btn" style={{fontSize: '10px'}}>Sign Up</Button>{' '}
+                <small>New to Gallery? <Button variant="outline-primary" onClick={handleSignUp} id="signup-btn" style={{fontSize: '10px'}}>Sign Up</Button>{' '} </small>
             </>
         )}
     </Div>
